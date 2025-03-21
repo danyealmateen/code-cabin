@@ -1,0 +1,9 @@
+# Docker volumes
+db_data/
+
+# Logs
+*.log
+
+# OS / editor crap
+.DS_Store
+.env
