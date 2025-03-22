@@ -24,13 +24,14 @@ services:
     volumes:
       - db_data:/var/lib/mysql
 
-  frontend:
+  frontend:  # 🛠️ FIX: den här måste vara indenterad under services
     build: ./frontend
     container_name: react-frontend
     ports:
       - "3000:3000"
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
 
